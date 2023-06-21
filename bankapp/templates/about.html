@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+<head>
+	<title>LOANS2GO | Loans HTML Template</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="loans HTML Template">
+	<meta name="keywords" content="loans, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Favicon -->
+	<link href="{% static 'img/favicon.ico' %}" rel="shortcut icon"/>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/flaticon.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header Section -->
+	<header class="header-section">
+		<a href="index.html" class="site-logo">
+			<img src="{% static 'img/logo1.png' %}" height="25px" width="130px" alt="">
+		</a>
+		<nav class="header-nav">
+			<ul class="main-menu">
+				<li><a href="{% url 'homepage' %}" >Home</a></li>
+				<li><a href="{% url 'aboutpage' %}" class="active">About us</a></li>
+<!--				<li><a href="#">Services</a>-->
+<!--					<ul class="sub-menu">-->
+<!--						{% for i in data %}-->
+<!--						<li><a href="{% url 'servicepage' category=i.Name %}">{{i.Name}}</a></li>-->
+<!--						{% endfor %}-->
+<!--					</ul>-->
+				</li>
+				<li><a href="{% url 'sectionloanpage' %}">Loans</a></li>
+				<li><a href="{% url 'accountpage' %}">Accounts</a></li>
+				<li><a href="{% url 'contactpage' %}">Contact</a></li>
+			</ul>
+
+		</nav>
+	</header>
+	<!-- Header Section end -->
+
+	<!-- Page top Section end -->
+	<section class="page-top-section set-bg" data-setbg="{% static 'img/page-top-bg/6.jpg' %}">
+		<div class="container">
+			<h2>About us</h2>
+			<nav class="site-breadcrumb">
+				<a class="sb-item" href="#">Home</a>
+				<span class="sb-item active">About us</span>
+			</nav>
+		</div>
+	</section>
+	<!-- Page top Section end -->
+
+	<!-- About Section end -->
+	<section class="about-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5">
+					<img src="{% static 'img/about-img.jpg' %}" alt="">
+				</div>
+				<div class="col-lg-7">
+					<div class="about-text">
+						<h2>Our Story</h2>
+						<p>LoantoGo is a Fintech incorporated in the year 2017. Founded by IITans , was processing upward of 10,000 loans a day and in absolute terms disbursed 10,000 Small ticket Digital loans.
+							In the process we were able to give qualified leads to other NBFC. So far the platform has generated leads of 65,00,000 and accepted loan applications from lakhs which are digitally
+							checked and processed within fraction of seconds. All this is done by an intelligent proprietary engine and the AI/ML “ Socrates”. The user interface is designed and built to give a
+							seamless journey to the customer. The Platform provides digital small ticket personal loans up to Rs.1,00,000 for tenures ranging from 3 to 12 months. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- About Section end -->
+
+	<!-- Review Section end -->
+	<section class="review-section spad">
+		<div class="container">
+			<div class="text-center text-white mb-5 pb-2">
+				<h2>What They Say About Us</h2>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="review-item">
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<p>I got Loan of Amount 10000 … Process was Very Fast… Within 1 day amount got credited into bank account… For Urgency its very helpful… It would be very helpful
+							if they could give more time for repayment …maybe in terms of more emi…</p>
+						<h6>Pankaj Mardolkar</h6>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="review-item">
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+
+						</div>
+						<p>This site is very helpful to everyone. It was genuine site. In my medical emergency this site was help me a lot at correct time. I referred my friends and everyone .
+							thanks to LoanstoGo team and Technical supporters. This site is really help to like a friend.</p>
+						<h6>Lakshman Naidu</h6>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="review-item">
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<p>I am a repetitive customer of this site It’s very useful for my emergency situation…It’s very helpful and the customer service is really amazing..
+							Kindly use this app it will help for you.. Thanks a lot</p>
+						<h6>Priya Subramanian</h6>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="review-item">
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<p>Wow it’s amazing site for getting Loan in my account. After tried lots of online loan app, it’s only possible to get loan.
+							Actually I have applied yesterday and today I got credited in my bank account. Its really helpful for my finance needed.
+							Thank you so much.</p>
+						<h6>Manoranjan Mohanata</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Review Section end -->
+
+	<!-- Authorities Section end -->
+	<section class="authorities-section spad">
+		<div class="container">
+			<div class="text-center">
+				<h2>People behind E-Loan inc</h2>
+			</div>
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="authoritie-item">
+						<img src="{% static 'img/brands/1.jpg' %}" height="150px" width="150px" style="margin-left:80px;" alt="">
+						<h4 style="text-align:center;">Andrews Mathew (Co-Founder & CEO)</h4>
+						<p>A computer science engineer from Harvard University with 15 years of work experience in areas ranging from high-performance computing, Linux kernel, computer networking and mathematical modelling.</p>
+
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="authoritie-item">
+						<img src="{% static 'img/brands/2.jpg' %}"  height="150px" width="150px" style="margin-left:80px;" alt="">
+						<h4>Alan Sebastian  (Co-Founder)</h4>
+						<p>A Computer Science Engineer from University of Oxford. His experience lies in algorithms, network security, high performance computing and distributed computing.</p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="authoritie-item">
+						<img src="{% static 'img/brands/3.jpg' %}" height="150px" width="150px" style="margin-left:80px;" alt="">
+						<h4>Albert Xavier (Co-Founder and CTO)</h4>
+						<p>A Software Architecture with 14 Years of strong domain experience in the Corporate Sector. Has in Apple (US), Capital One Bank (USA), and TitleMax (US).</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Authorities Section end -->
+
+	<!-- Score Section end -->
+	<section class="score-section text-white set-bg" data-setbg="{% static 'img/score-bg.jpg' %}">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12 col-lg-8">
+					<h2>Get Personal Loan Digitally with flexi EMI upto 12 Months.</h2>
+					<a href="#" class="site-btn sb-small">Apply Now</a><br><br>
+					<div class="elementor-element elementor-element-8585901 elementor-widget elementor-widget-tt-list" data-id="8585901" data-element_type="widget" data-widget_type="tt-list.default">
+				<div class="elementor-widget-container">
+				  <ul class="tt__list inline-items">
+		  			<li class="list-item inline-item icon-shape">
+
+				  						<i class="ei ei-icon_check"></i>
+
+				<span class="list-text">Quick & Easy Application Process</span>
+
+				  			</li>
+
+		  			<li class="list-item inline-item icon-shape">
+
+				  						<i class="ei ei-icon_check"></i>
+
+				<span class="list-text">No Paper Work</span>
+
+				  			</li>
+
+		  			<li class="list-item inline-item icon-shape">
+
+				  						<i class="ei ei-icon_check"></i>
+
+				<span class="list-text">Approval in 10 Minutes</span>
+
+				  			</li>
+
+		  			<li class="list-item inline-item icon-shape">
+
+				  						<i class="ei ei-icon_check"></i>
+
+				<span class="list-text">Affordable & Flexible EMI Options</span>
+
+				  			</li>
+
+		  	  </ul>
+				</div>
+				</div>
+				</div>
+	</section>
+	<!-- Score Section end -->
+
+	<!-- Footer Section -->
+	<footer class="footer-section">
+		<div class="container">
+			<a href="index.html" class="footer-logo">
+				<img src="{% static 'img/logo1.png' %}" height="25px" width="130px" alt="">
+			</a>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<p>E-Loan inc is a company that will change the way loans in India are processed.
+							From a traditional model of loans, we bring together the new credit scoring
+							systems with our technology for customers to get quick loans digitally
+							within minutes.</p>
+						<div class="social-links">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-instagram"></i></a>
+							<a href="#"><i class="fa fa-linkedin"></i></a>
+							<a href="#"><i class="fa fa-pinterest"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-youtube-play"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>What we do</h2>
+						<ul>
+							<li><a href="#">Loans</a></li>
+							<li><a href="#">Home loans</a></li>
+							<li><a href="#">Vehicle loans</a></li>
+							<li><a href="#">Business loans</a></li>
+							<li><a href="#">Gold loans</a></li>
+							<li><a href="#">Education loans</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>About us</h2>
+						<ul>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Our story</a></li>
+							<li><a href="#">Testimonials</a></li>
+							<li><a href="#">Meet the leadership team</a></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>Contact Info</h2>
+						<ul>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">Sitemap</a></li>
+							<li><a href="#">Careers</a></li>
+							<li><a href="#">Contact us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="copyright" style="margin-left:400px;">Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+				All rights reserved |<a>Loans2Go</a></div>
+		</div>
+	</footer>
+	<!-- Footer Section end -->
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>

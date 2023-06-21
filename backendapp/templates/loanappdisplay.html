@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% block content %}
+<html>
+<head>
+<style>
+table, th, td {
+    border: 2px solid white;
+    border-collapse: collapse;
+    color:black;
+
+}
+th, td {
+    padding:9px;
+    text-align: center;
+}
+table#table {
+    width: 100%;
+    background-color: LightSteelBlue ;
+
+}
+</style>
+</head>
+<body>
+<table style="width:100%">
+    <table id="table">
+        <tr >
+            <th>Name</th>
+            <th>Email Address</th>
+            <th>Mobile Number</th>
+            <th>Loan Type</th>
+            <th>Loan Amount</th>
+            <th>Loan Period</th>
+            <th colspan="2">Options</th>
+
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.Name}}</td>
+            <td>{{i.Email}}</td>
+            <td>{{i.Number}}</td>
+            <td>{{i.Type}}</td>
+            <td>{{i.Amount}}</td>
+            <td>{{i.Period}}</td>
+
+            <td>
+
+            <form action="{% url 'loanaccept' dataid=i.id %}">
+            <button type="submit">Accept</button>
+            </form>
+
+        </td>
+
+            <td>
+
+            <form action="{% url 'loanreject' dataid=i.id %}">
+            <button type="submit">Reject</button>
+            </form>
+
+        </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</table>
+</body>
+</html>
+{% endblock %}

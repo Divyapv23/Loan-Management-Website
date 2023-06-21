@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% block content %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+table, th, td {
+    border: 2px solid white;
+    border-collapse: collapse;
+    color:black;
+    table-layout: auto;
+
+
+}
+th, td {
+    padding:2px;
+    text-align: center;
+}
+table#table {
+    width: 100%;
+    transform : scale(0.8);
+    margin:auto;
+    padding:0px;
+    background-color: LightSteelBlue ;
+
+}
+</style>
+</head>
+<body>
+<div style="margin-left:-180px; ">
+    <table style="width:100%;" id="table">
+
+
+        <h3 style="margin-left:400px;">
+            Application Details
+        </h3>
+
+        <tr>
+            <th colspan="8">Personal Details</th>
+            <th colspan="2">Account Details</th>
+            <th colspan="3">Scanned Copy</th>
+
+        </tr>
+
+        <tr>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Mob No:</th>
+            <th>Mail Id</th>
+            <th>Occupation</th>
+            <th>Nominee</th>
+            <th>Acc Type</th>
+            <th>Acc Catg</th>
+            <th>Image</th>
+            <th>Id Proof</th>
+            <th>Signature</th>
+
+
+        </tr>
+
+        {% for i in data %}
+        <tr>
+            <td>{{i.Prefix}}{{i.Firstname}}{{i.Lastname}}</td>
+            <td>{{i.Dob}}</td>
+            <td>{{i.Gender}}</td>
+            <td>{{i.Address}},{{i.Address1}}, {{i.City}},{{i.State}},{{i.Pincode}},{{i.Country}}</td>
+            <td>{{i.No}}</td>
+            <td>{{i.Email}}</td>
+            <td>{{i.Occupation}}</td>
+            <td>{{i.Nominee}}-{{i.Relation}}</td>
+            <td>{{i.Account}}</td>
+            <td>{{i.Category}}</td>
+            <td>
+                <img src="{{i.Image.url}}" height="100px;" width="100px;">
+            </td>
+            <td>
+                <img src="{{i.Idcard.url}}" height="100px;" width="100px;">
+            </td>
+            <td>
+                <img src="{{i.Sign.url}}" height="100px;" width="100px;">
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+
+
+
+
+
+</table>
+</div>
+</body>
+</html>
+{% endblock %}

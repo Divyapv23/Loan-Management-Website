@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+    <title>LOANS2GO | Loans HTML Template</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="loans HTML Template">
+	<meta name="keywords" content="loans, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Favicon -->
+	<link href="{% static 'img/favicon.ico' %}" rel="shortcut icon"/>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/flaticon.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div style="width:600px;height:1420px;margin-left:400px;background-color:#E7E9EB;
+font-size:13px;padding-right:25px;padding-left:25px;padding-top:10px">
+  <h3 STYLE="margin-left:100px">Account Application Form</h3>
+<h5>Personal Information</h5><br>
+<form class="row g-3" method="POST" action="{% url 'accountpagedetails' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">Prefix</label>
+    <select id="inputState" class="form-select" name="Prefix">
+      <option selected>Mr.</option>
+      <option>Ms.</option>
+      <option>Mrs.</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <label for="inputEmail4" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="inputEmail4" name="firstname">
+  </div>
+  <div class="col-md-4">
+    <label for="inputEmail4" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="inputEmail4" name="lastname">
+  </div>
+
+
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Date of Birth</label>
+    <input type="date" class="form-control" id="inputPassword4" name="dob">
+  </div>
+
+  <div class="col-md-6">
+    <label for="inputState" class="form-label">Gender</label>
+    <select id="inputState" class="form-select" name="gender">
+      <option selected>Select</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Others</option>
+    </select>
+  </div>
+
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="street address" name="address">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label"></label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="street address line2" name="address1">
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label"></label>
+    <input type="text" class="form-control" id="inputEmail4" placeholder="District" name="city">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label"></label>
+    <input type="text" class="form-control" id="inputPassword4" placeholder="State/Province" name="state">
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label"></label>
+    <input type="number" class="form-control" id="inputCity" placeholder="Postal Code" name="pincode">
+  </div>
+  <div class="col-md-6">
+    <label for="inputState" class="form-label"></label>
+    <select id="inputState" class="form-select" name="country">
+      <option selected>India</option>
+      <option>Others</option>
+    </select>
+  </div>
+
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Mobile Number</label>
+    <input type="number" class="form-control" id="inputPassword4" name="no">
+  </div>
+
+  <div class="col-md-6">
+    <label for="inputZip" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4" placeholder="example@gmail.com" name="email">
+
+  </div>
+
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Nominee Name</label>
+    <input type="text" class="form-control" id="inputZip" name="nominee">
+
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Nominee Relation</label>
+    <input type="text" class="form-control" id="inputPassword4" name="relation">
+  </div>
+
+  <div class="col-md-6">
+   <label for="inputEmail4" class="form-label">Occupation</label>
+  <div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Student">
+  <label class="form-check-label" for="flexRadioDefault1">Student</label>
+  </div>
+  <div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked value="Govt/Central Govt Employee">
+  <label class="form-check-label" for="flexRadioDefault2">Govt/Central Govt Employee</label>
+  </div>
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked value="Private Employee">
+  <label class="form-check-label" for="flexRadioDefault2">Private Employee</label>
+    </div>
+
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked value="Others">
+  <label class="form-check-label" for="flexRadioDefault2">Others</label>
+ </div>
+  </div>
+
+  <div class="col-md-6">
+   <label for="inputEmail4" class="form-label">Form Of Identification</label>
+    <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="Aadhar Card" id="flexCheckDefault" name="identification">
+  <label class="form-check-label" for="flexCheckDefault">
+    Aadhar Card
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="PAN Card" name="identification" id="flexCheckChecked" checked >
+  <label class="form-check-label" for="flexCheckChecked">
+    PAN Card
+  </label>
+</div>
+    <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="Driving Licence" name="identification" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    Driving Licence
+  </label>
+</div>
+    <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="Passport" name="identification" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    Passport
+  </label>
+</div>
+  </div>
+
+
+  <div class="col-12">
+    <label for="inputEmail4" class="form-label">ID Card Upload</label>
+  <label for="images" class="drop-container">
+  <span class="drop-title" >Drop files here</span>
+    or
+  <input type="file" id="images" name="idcard" accept="image/*" required>
+  </label>
+  </div>
+
+  <h5>Account Information</h5>
+
+  <div class="col-md-6">
+    <label for="inputState" class="form-label">Account Type</label>
+    <select id="inputState" class="form-select" name="account">
+      <option selected>Please Select</option>
+      <option>Savings Account</option>
+      <option>Current Account</option>
+
+    </select>
+  </div>
+
+  <div class="col-md-6">
+    <label for="inputState" class="form-label">Account Category</label>
+    <select id="inputState" class="form-select" name="category">
+      <option selected>Please Select</option>
+      <option>Individual</option>
+      <option>Joint</option>
+
+    </select>
+  </div>
+
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Upload Your Image</label>
+    <input type="file" class="form-control" id="inputZip" name="image">
+
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Signature</label>
+    <input type="file" class="form-control" id="inputPassword4" name="signature">
+  </div>
+
+  <div class="col-12" style="margin-left:250px">
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </div>
+</form>
+  </div>
+
+
+
+<style>
+  .drop-container {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px dashed #555;
+  color: #444;
+  cursor: pointer;
+  transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.drop-container:hover {
+  background: #eee;
+  border-color: #111;
+}
+
+.drop-container:hover .drop-title {
+  color: #222;
+}
+
+.drop-title {
+  color: #444;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: color .2s ease-in-out;
+}
+
+input[type=file] {
+  width: 350px;
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+
+
+
+
+</style>
+
+<footer class="footer-section">
+		<div class="container">
+			<a href="index.html" class="footer-logo">
+				<img src="{% static 'img/logo.png' %}" alt="">
+			</a>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>What we do</h2>
+						<ul>
+							<li><a href="#">Loans</a></li>
+							<li><a href="#">Car loans</a></li>
+							<li><a href="#">Debt consolidation loans</a></li>
+							<li><a href="#">Home improvement loans</a></li>
+							<li><a href="#"> Wedding loans</a></li>
+							<li><a href="#">Innovative Finance ISA</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>About us</h2>
+						<ul>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Our story</a></li>
+							<li><a href="#">Meet the board</a></li>
+							<li><a href="#">Meet the leadership team</a></li>
+							<li><a href="#">Awards</a></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>Legal</h2>
+						<ul>
+							<li><a href="#">Privacy policy</a></li>
+							<li><a href="#">Loans2go principles</a></li>
+							<li><a href="#">Website terms</a></li>
+							<li><a href="#">Cookie policy</a></li>
+							<li><a href="#">Conflicts policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>Site Info</h2>
+						<ul>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Sitemap</a></li>
+							<li><a href="#">Careers</a></li>
+							<li><a href="#">Contact us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem por incididunt ut labore et dolore mag na aliqua.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Ut gravida mattis magna, non varius lorem sodales nec. In libero orci, ornare non nisl.</p>
+			<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+		</div>
+	</footer>
+
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/circle-progress.min.js' %}"></script>
+	<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
+
+

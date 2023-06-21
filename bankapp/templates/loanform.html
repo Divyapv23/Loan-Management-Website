@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+<head>
+	<title>LOANS2GO | Loans HTML Template</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="loans HTML Template">
+	<meta name="keywords" content="loans, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Favicon -->
+	<link href="{% static 'img/favicon.ico' %}" rel="shortcut icon"/>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/flaticon.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header Section -->
+	<header class="header-section">
+		<a href="index.html" class="site-logo">
+			<img src="{% static 'img/logo1.png' %}" height="25px" width="130px" alt="">
+		</a>
+		<nav class="header-nav">
+			<ul class="main-menu">
+				<li><a href="{% url 'homepage' %}" class="active">Home</a></li>
+				<li><a href="{% url 'aboutpage' %}">About us</a></li>
+<!--				<li><a href="#">Services</a>-->
+<!--					<ul class="sub-menu">-->
+<!--						{% for i in data %}-->
+<!--						<li><a href="{% url 'servicepage' category=i.Name %}">{{i.Name}}</a></li>-->
+<!--						{% endfor %}-->
+<!--					</ul>-->
+				</li>
+				<li><a href="{% url 'sectionloanpage' %}">Loans</a></li>
+				<li><a href="{% url 'accountpage' %}">Accounts</a></li>
+				<li><a href="{% url 'contactpage' %}">Contact</a></li>
+			</ul>
+
+		</nav>
+	</header>
+<section class="feature-section spad">
+		<div class="container">
+			<div class="feature-item">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="feature-text">
+						<h2>Loan is your key to fastest cash</h2>
+						<img src="{% static 'img/aggrement.png' %}"  style="padding-left:100px;" alt="">
+						</div>
+					</div>
+
+					<div class="col-lg-6" >
+						<div class="feature-text">
+							<form method="POST" action="{% url 'loanappdetails' %}">
+								{% csrf_token %}
+
+								<div style="width:540px; height:550px;background-color:;padding-left:10px;text-align:center;padding-top:10px;border-width:2px; border-style:solid;">
+									<h4>Loan Application Form</h4><br>
+									<div class="row g-3" >
+									 <div class="col-md-7" >
+										<div class="mb-3" >
+
+  										<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="First &amp; Last Name (as per PAN card)" style="text-align:center;margin-left:120px;" name="Name">
+									    </div>
+									    <div class="mb-3">
+
+  										<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email address" style="text-align:center;margin-left:120px;" name="Email">
+									    </div>
+									    <div class="mb-3">
+
+										<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Mobile Number" style="text-align:center;margin-left:120px;" name="Number">
+
+									    </div>
+
+
+										<select class="form-control" aria-label=".form-select-sm example" style="text-align:center;margin-left:120px;" name="Type">
+  										<option selected>Loan Type</option>
+  										<option >Home Loan</option>
+  										<option >Vehicle Loan</option>
+  										<option >Business Loan</option>
+  										<option >Personal Loan</option>
+  										<option >Gold Loan</option>
+  										<option >Education Loan</option>
+										</select><br>
+
+
+									    <div class="mb-3">
+
+										<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Loan Amount" style="text-align:center;margin-left:120px;" name="Amount">
+
+									    </div>
+
+										<div class="mb-3">
+
+										<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Loan Tenure" style="text-align:center;margin-left:120px;" name="Period">
+
+									    </div>
+										<div class="mb-3">
+    									<div class="form-check" style="margin-left:120px;">
+      									<input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required ">
+      									<label class="form-check-label" for="invalidCheck2" >
+        								Agree to terms and conditions
+      									</label>
+    									</div>
+  										</div><br>
+  										<div class="col-7" style="margin-left:170px;">
+    									<button class="btn btn-primary" type="submit" id="btn1">Submit form</button>
+  										</div>
+									 </div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Footer Section -->
+	<footer class="footer-section">
+		<div class="container">
+			<a href="index.html" class="footer-logo">
+				<img src="{% static 'img/logo.png' %}" alt="">
+			</a>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>What we do</h2>
+						<ul>
+							<li><a href="#">Loans</a></li>
+							<li><a href="#">Car loans</a></li>
+							<li><a href="#">Debt consolidation loans</a></li>
+							<li><a href="#">Home improvement loans</a></li>
+							<li><a href="#"> Wedding loans</a></li>
+							<li><a href="#">Innovative Finance ISA</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>About us</h2>
+						<ul>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Our story</a></li>
+							<li><a href="#">Meet the board</a></li>
+							<li><a href="#">Meet the leadership team</a></li>
+							<li><a href="#">Awards</a></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>Legal</h2>
+						<ul>
+							<li><a href="#">Privacy policy</a></li>
+							<li><a href="#">Loans2go principles</a></li>
+							<li><a href="#">Website terms</a></li>
+							<li><a href="#">Cookie policy</a></li>
+							<li><a href="#">Conflicts policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>Site Info</h2>
+						<ul>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Sitemap</a></li>
+							<li><a href="#">Careers</a></li>
+							<li><a href="#">Contact us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem por incididunt ut labore et dolore mag na aliqua.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Ut gravida mattis magna, non varius lorem sodales nec. In libero orci, ornare non nisl.</p>
+			<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+		</div>
+	</footer>
+	<!-- Footer Section end -->
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/circle-progress.min.js' %}"></script>
+	<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+
+
+
+	</body>
+</html>
